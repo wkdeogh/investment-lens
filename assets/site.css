@@ -17,12 +17,14 @@
 }
 
 .site-header-inner {
+  box-sizing: border-box;
   max-width: 1160px;
   margin: 0 auto;
   padding: 0 28px;
 }
 
 .home-link {
+  box-sizing: border-box;
   display: inline-flex;
   align-items: center;
   justify-content: center;
