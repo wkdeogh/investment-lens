@@ -1,4 +1,4 @@
-# Investment Lens
+# Equora
 
 기업 분석 리포트를 모아 보는 정적 사이트입니다.
 
@@ -18,6 +18,12 @@
 4. `index.html`의 `.report-list`에 해당 리포트 링크를 추가합니다.
 
 공통 헤더 스타일은 `assets/site.css`에서 관리합니다. 리포트 본문과 분석 도구는 각 HTML에 포함되며, 외부 링크의 원문 자료는 원래 출처에서 열립니다.
+
+## 홈 화면 아이콘
+
+모든 페이지에서 `apple-touch-icon`과 `site.webmanifest`를 연결합니다. 웹앱 실행 시작점과 범위는 저장소 하위 경로를 유지하도록 상대 경로를 사용합니다. 아이콘 원본과 16·32·180·192·512px PNG는 `assets/icons/`에 있습니다. 오프라인 캐시나 자동 설치 안내는 추가하지 않았습니다.
+
+구현 참고: [Apple 홈 화면 아이콘](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html), [MDN 웹앱 아이콘](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/icons).
 
 ## 게시
 
