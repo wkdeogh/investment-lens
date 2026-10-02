@@ -1,0 +1,119 @@
+:root {
+  --bg: #080f1b;
+  --ink: #eff4fc;
+  --muted: #afbdd1;
+  --line: #304158;
+  --blue: #83b7ff;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: block;
+  padding: 4px 0;
+  border-bottom: 1px solid var(--line);
+  background: var(--bg);
+}
+
+.site-header-inner {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+.home-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  min-width: 64px;
+  min-height: 44px;
+  padding: 0 10px;
+  border-radius: 6px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1;
+  text-decoration: none;
+  transition: color 150ms, background-color 150ms;
+}
+
+.home-link svg {
+  flex: none;
+  width: 18px;
+  height: 18px;
+}
+
+.home-link:hover,
+.home-link:active {
+  color: var(--ink);
+  background: #16253b;
+}
+
+.home-link:focus-visible,
+.report-list a:focus-visible {
+  outline: 3px solid var(--blue);
+  outline-offset: 3px;
+}
+
+.library {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.report-library {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 44px 28px;
+}
+
+.report-library h1 {
+  margin: 0 0 20px;
+  font-size: 28px;
+  line-height: 1.4;
+  letter-spacing: -0.035em;
+}
+
+.report-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.report-list li {
+  border-bottom: 1px solid var(--line);
+}
+
+.report-list a {
+  display: block;
+  padding: 14px 0;
+  color: var(--blue);
+  text-underline-offset: 4px;
+  transition: color 150ms;
+}
+
+.report-list a:hover {
+  color: var(--ink);
+}
+
+@media (max-width: 700px) {
+  .site-header-inner { padding: 0 18px; }
+  .report-library { padding: 32px 18px; }
+}
+
+@media (max-width: 350px) {
+  .site-header-inner { padding: 0 14px; }
+  .report-library { padding-right: 14px; padding-left: 14px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-link, .report-list a { transition: none; }
+}
+
+@media print {
+  .site-header { display: none; }
+}
